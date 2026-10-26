@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10110f">
+    <meta name="description" content="A public blacklist registry for connected Discord servers.">
+    <title>Blacklist Registry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Blacklist Registry home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>BLACKLIST<span class="brand-dot">.</span></a>
+        <div class="topbar-status"><span id="api-dot" class="status-dot"></span><span id="api-status">Connecting</span></div>
+      </header>
+      <main>
+        <section class="intro">
+          <div class="intro-copy"><p class="eyebrow">COMMUNITY SAFETY / PUBLIC REGISTRY</p><h1>One list.<br><span>Every detail.</span></h1><p class="intro-text">A live record of members blacklisted by connected Discord servers.</p></div>
+          <div class="intro-stamp" aria-hidden="true"><span>LIVE</span><b>BL</b><small>PUBLIC<br>INDEX</small></div>
+        </section>
+        <section class="metrics" aria-label="Blacklist summary">
+          <div class="metric"><span>ENTRIES</span><strong id="entry-count">--</strong></div>
+          <div class="metric"><span>SERVERS</span><strong id="server-count">--</strong></div>
+          <div class="metric metric-updated"><span>LAST SYNC</span><strong id="last-sync">Waiting</strong></div>
+        </section>
+        <section class="registry">
+          <div class="registry-heading"><div><p class="eyebrow">THE INDEX</p><h2>Blacklisted members</h2></div><button class="refresh-button" id="refresh" type="button" title="Refresh blacklist" aria-label="Refresh blacklist">&#x21bb;</button></div>
+          <div class="toolbar"><label class="search-box"><span class="search-icon" aria-hidden="true">&#x2315;</span><span class="sr-only">Search blacklist entries</span><input id="search" type="search" placeholder="Search username, ID, reason, or server" autocomplete="off"></label><span id="result-count" class="result-count">0 records</span></div>
+          <div id="entry-list" class="entry-list" aria-live="polite"><div class="loading-state"><span class="loader"></span>Loading blacklist</div></div>
+          <div id="feed-note" class="feed-note" hidden></div>
+        </section>
+      </main>
+      <footer class="footer"><span>BLACKLIST REGISTRY</span><span>PUBLIC FEED <i></i></span></footer>
+    </div>
+  </body>
+</html>

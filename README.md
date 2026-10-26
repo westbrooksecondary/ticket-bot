@@ -80,3 +80,4 @@ Add the deployed callback URL to the Discord application's OAuth2 redirects. The
 - The API keeps OAuth sessions in memory for 12 hours. Users sign in again after an API restart; server configuration is stored separately in `DATA_DIR`.
 - The bot and dashboard are an early baseline, not a hosted SaaS service. Anyone deploying it is responsible for keeping bot credentials private, using HTTPS, and providing persistent storage.
 - Ticket channels are private to the opener, the configured support role, and the bot. Closing a ticket locks the opener's ability to send messages; closed channels remain for staff review.# blacklist-bot
+# blacklist-bot
